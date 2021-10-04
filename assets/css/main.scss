@@ -2,3 +2,75 @@
 ---
 
 @import "main";
+
+$default-grey: #979090;
+
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+
+  > .gallery {
+    background-color: green;
+    flex-grow: 2;
+  }
+}
+
+.hero  {
+  & {
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  > .avatar-container {
+    margin-top: -5em;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-image: url('https://bit.ly/2Yd91Ob');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -45px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  > .name-title {
+    font-family: 'Caveat', cursive;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  > .description {
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  > .copyright {
+    font-family: 'Schoolbell', cursive;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    color: $default-grey;
+    font-size: 1rem;
+  }
+}
+
+.social-container {
+  & {
+    min-width: 300px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  > .social-anchor:nth-child(3) {
+    margin-top: -2px;
+  }
+}
